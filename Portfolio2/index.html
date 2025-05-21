@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Étudiant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="animated-background">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+        <div class="shape shape4"></div>
+        <div class="shape shape5"></div>
+    </div>
+    <nav class="navbar">
+        <a href="#" class="logo">Portfolio</a>
+        <ul class="nav-links">
+            <li><a href="#accueil" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="#competences" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            <li class="language-selector">
+                <button class="lang-btn active" onclick="changeLanguage('fr')">FR</button>
+                <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">Bienvenue sur mon Portfolio</h1>
+            <p data-i18n="hero.subtitle">Étudiant passionné par le développement web</p>
+            <a href="#projets" class="cta-button" data-i18n="hero.cta">Voir mes projets</a>
+        </div>
+    </section>
+
+    <section id="projets" class="projects">
+        <h2 data-aos="fade-up" data-i18n="projects.title">Mes Projets</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://via.placeholder.com/300x200" alt="Projet 1">
+                <h3 data-i18n="projects.project1.title">Projet 1</h3>
+                <p data-i18n="projects.project1.description">Description courte du projet</p>
+                <button class="view-project" data-project="1" data-i18n="projects.view">Voir plus</button>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://via.placeholder.com/300x200" alt="Projet 2">
+                <h3 data-i18n="projects.project2.title">Projet 2</h3>
+                <p data-i18n="projects.project2.description">Description courte du projet</p>
+                <button class="view-project" data-project="2" data-i18n="projects.view">Voir plus</button>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://via.placeholder.com/300x200" alt="Projet 3">
+                <h3 data-i18n="projects.project3.title">Projet 3</h3>
+                <p data-i18n="projects.project3.description">Description courte du projet</p>
+                <button class="view-project" data-project="3" data-i18n="projects.view">Voir plus</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img src="" alt="Projet détaillé" class="modal-image">
+                <div class="modal-info">
+                    <h2></h2>
+                    <p class="modal-description"></p>
+                    <div class="modal-technologies"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="competences" class="skills">
+        <h2 data-aos="fade-up" data-i18n="skills.title">Mes Compétences</h2>
+        <div class="skills-grid">
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="50">
+                <i class="fab fa-html5"></i>
+                <h3 data-i18n="skills.html5">HTML5</h3>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fab fa-css3-alt"></i>
+                <h3 data-i18n="skills.css3">CSS3</h3>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
+                <i class="fab fa-js"></i>
+                <h3 data-i18n="skills.javascript">JavaScript</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 data-aos="fade-up" data-i18n="contact.title">Contact</h2>
+        <div class="contact-content">
+            <div class="contact-item" data-aos="fade-right" data-aos-delay="100">
+                <i class="fas fa-envelope"></i>
+                <h3 data-i18n="contact.email">Email</h3>
+                <a href="mailto:aylan.haddouchi@edu.univ-fcomte.fr">
+                    aylan.haddouchi@edu.univ-fcomte.fr
+                </a>
+            </div>
+            <div class="contact-item" data-aos="fade-right" data-aos-delay="200">
+                <i class="fab fa-linkedin"></i>
+                <h3 data-i18n="contact.linkedin">LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/aylan-haddouchi-a60768309/" target="_blank" rel="noopener noreferrer" data-i18n="contact.linkedin_link">
+                    Voir mon profil LinkedIn
+                </a>
+            </div>
+            <div class="contact-item" data-aos="fade-right" data-aos-delay="300">
+                <i class="fab fa-github"></i>
+                <h3 data-i18n="contact.github">GitHub</h3>
+                <a href="https://github.com/aylanh45pro" target="_blank" rel="noopener noreferrer" data-i18n="contact.github_link">
+                    Voir mon profil GitHub
+                </a>
+            </div>
+            <div class="contact-item aos-init aos-animate" data-aos="fade-right" data-aos-delay="400" data-aos-offset="0" data-aos-once="false">
+                <i class="fas fa-file-alt"></i>
+                <h3 data-i18n="contact.cv">CV</h3>
+                <div class="cv-download">
+                    <a href="chemin/vers/cv-fr.pdf" target="_blank" data-i18n="contact.cv_fr">
+                        <i class="fas fa-download"></i>
+                        <span>CV Français</span>
+                    </a>
+                    <a href="chemin/vers/cv-en.pdf" target="_blank" data-i18n="contact.cv_en">
+                        <i class="fas fa-download"></i>
+                        <span>CV English</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p data-i18n="footer.copyright">&copy; 2024 Portfolio Étudiant. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
