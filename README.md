@@ -1,7 +1,5 @@
 # PortfolioPro
 
-![Portfolio Preview](images/Cablissimo.png)
-
 ## 📋 Description
 
 PortfolioPro est un site web personnel moderne et responsive présentant mes compétences, projets et expériences professionnelles. Conçu avec une attention particulière à l'expérience utilisateur et à l'accessibilité, ce portfolio offre une interface élégante et interactive.
