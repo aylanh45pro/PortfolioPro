@@ -1,146 +1,596 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Étudiant</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Portfolio | Aylan Haddouchi</title>
+    <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Portfolio d'Aylan Haddouchi, étudiant en informatique spécialisé dans le développement web et les applications mobiles.">
+    <meta name="author" content="Aylan Haddouchi">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/modal-carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="animated-background">
-        <div class="shape shape1"></div>
-        <div class="shape shape2"></div>
-        <div class="shape shape3"></div>
-        <div class="shape shape4"></div>
-        <div class="shape shape5"></div>
+    <!-- Loading Spinner -->
+    <div class="loading-overlay" id="loading-overlay" role="progressbar" aria-label="Chargement de la page" aria-busy="true">
+        <div class="spinner" aria-hidden="true"></div>
     </div>
+    
+    <div class="cursor-follower"></div>
+    
+    <!-- Navigation -->
     <nav class="navbar">
-        <a href="#" class="logo">Portfolio</a>
-        <ul class="nav-links">
-            <li><a href="#accueil" data-i18n="nav.home">Accueil</a></li>
-            <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
-            <li><a href="#competences" data-i18n="nav.skills">Compétences</a></li>
-            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-            <li class="language-selector">
-                <button class="lang-btn active" onclick="changeLanguage('fr')">FR</button>
-                <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
-            </li>
-        </ul>
+        <div class="container">
+            <div class="logo">
+                <a href="#home">Portfolio<span>.</span></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#home" class="active" data-key="nav_home">Accueil</a></li>
+                    <li><a href="#about" data-key="nav_about">À propos</a></li>
+                    <li><a href="#skills" data-key="nav_skills">Compétences</a></li>
+                    <li><a href="#projects" data-key="nav_projects">Projets</a></li>
+                    <li><a href="#education" data-key="nav_education">Formation</a></li>
+                    <li><a href="#contact" data-key="nav_contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="language-selector" role="group" aria-label="Sélection de la langue">
+                <span class="language-label fr active" data-lang="fr" role="button" tabindex="0" aria-pressed="true">FR</span>
+                <div class="language-toggle" id="language-toggle" role="button" aria-label="Changer de langue" tabindex="0"></div>
+                <span class="language-label en" data-lang="en" role="button" tabindex="0" aria-pressed="false">EN</span>
+            </div>
+            <div class="hamburger" role="button" aria-label="Menu de navigation" aria-expanded="false" aria-controls="nav-links" tabindex="0">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </div>
+        </div>
     </nav>
 
-    <section id="accueil" class="hero">
-        <div class="hero-content">
-            <h1 data-i18n="hero.title">Bienvenue sur mon Portfolio</h1>
-            <p data-i18n="hero.subtitle">Étudiant passionné par le développement web</p>
-            <a href="#projets" class="cta-button" data-i18n="hero.cta">Voir mes projets</a>
-        </div>
-    </section>
-
-    <section id="projets" class="projects">
-        <h2 data-aos="fade-up" data-i18n="projects.title">Mes Projets</h2>
-        <div class="projects-grid">
-            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://via.placeholder.com/300x200" alt="Projet 1">
-                <h3 data-i18n="projects.project1.title">Projet 1</h3>
-                <p data-i18n="projects.project1.description">Description courte du projet</p>
-                <button class="view-project" data-project="1" data-i18n="projects.view">Voir plus</button>
-            </div>
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="https://via.placeholder.com/300x200" alt="Projet 2">
-                <h3 data-i18n="projects.project2.title">Projet 2</h3>
-                <p data-i18n="projects.project2.description">Description courte du projet</p>
-                <button class="view-project" data-project="2" data-i18n="projects.view">Voir plus</button>
-            </div>
-            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                <img src="https://via.placeholder.com/300x200" alt="Projet 3">
-                <h3 data-i18n="projects.project3.title">Projet 3</h3>
-                <p data-i18n="projects.project3.description">Description courte du projet</p>
-                <button class="view-project" data-project="3" data-i18n="projects.view">Voir plus</button>
-            </div>
-        </div>
-    </section>
-
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-body">
-                <img src="" alt="Projet détaillé" class="modal-image">
-                <div class="modal-info">
-                    <h2></h2>
-                    <p class="modal-description"></p>
-                    <div class="modal-technologies"></div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="reveal-text"><span data-key="hero_greeting">Bonjour, je suis</span> <span class="highlight">Aylan Haddouchi</span></h1>
+                    <h2 class="reveal-text delay-1"><span data-key="hero_student">Étudiant en</span> <span class="typed-text"></span></h2>
+                    <p class="reveal-text delay-2" data-key="hero_description">Passionné par le développement web et les nouvelles technologies.</p>
+                    <div class="hero-buttons reveal-text delay-3">
+                        <a href="#projects" class="btn primary-btn" data-key="hero_projects_btn">Voir mes projets</a>
+                        <a href="#contact" class="btn secondary-btn" data-key="hero_contact_btn">Me contacter</a>
+                    </div>
+                    <div class="social-icons reveal-text delay-4">
+                        <a href="https://github.com/aylanh45pro" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/aylan-haddouchi-a60768309/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:aylan.haddouchi@edu.univ-fcomte.fr"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="terminal-container">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="terminal-button close"></span>
+                                <span class="terminal-button minimize"></span>
+                                <span class="terminal-button maximize"></span>
+                            </div>
+                            <div class="terminal-title">portfolio@user: ~/projects</div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">portfolio@user:~$</span>
+                                <span class="terminal-command" id="typed-command-1"></span>
+                            </div>
+                            <div class="terminal-output" id="terminal-output-1"></div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">portfolio@user:~$</span>
+                                <span class="terminal-command" id="typed-command-2"></span>
+                            </div>
+                            <div class="terminal-output" id="terminal-output-2"></div>
+                            <div class="terminal-line">
+                                <span class="terminal-prompt">portfolio@user:~$</span>
+                                <span class="terminal-command" id="typed-command-3"></span>
+                            </div>
+                            <div class="terminal-output" id="terminal-output-3"></div>
+                            <div class="terminal-line current-line">
+                                <span class="terminal-prompt">portfolio@user:~$</span>
+                                <span class="terminal-current-command"></span>
+                                <span class="terminal-cursor"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="hero-bg">
+            <div class="parallax-bg"></div>
+            <div id="hero-animation"></div>
+        </div>
+    </section>
 
-    <section id="competences" class="skills">
-        <h2 data-aos="fade-up" data-i18n="skills.title">Mes Compétences</h2>
-        <div class="skills-grid">
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="50">
-                <i class="fab fa-html5"></i>
-                <h3 data-i18n="skills.html5">HTML5</h3>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="about_title">À propos de moi</h2>
+                <div class="section-line"></div>
             </div>
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                <i class="fab fa-css3-alt"></i>
-                <h3 data-i18n="skills.css3">CSS3</h3>
-            </div>
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
-                <i class="fab fa-js"></i>
-                <h3 data-i18n="skills.javascript">JavaScript</h3>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <div class="about-illustration">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="experience-badge">
+                            <span class="number">2</span>
+                            <span class="text">ans d'études</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3 data-key="about_subtitle">Qui suis-je?</h3>
+                    <p data-key="about_description1">Je suis un étudiant passionné d'informatique, spécialisé dans le développement. Mon parcours académique m'a permis d'acquérir de solides compétences techniques et une approche méthodique de la résolution de problèmes.</p>
+                    <p data-key="about_description2">J'aime relever des défis techniques et créer des solutions innovantes. Mon objectif est de continuer à apprendre et à me perfectionner dans le domaine du développement logiciel.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-title" data-key="about_name">Nom:</span>
+                            <span class="info-value">Aylan Haddouchi</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title" data-key="about_email">Email:</span>
+                            <span class="info-value">aylan.haddouchi@edu.univ-fcomte.fr</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title" data-key="about_age">Âge:</span>
+                            <span class="info-value">19 ans</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title" data-key="about_location">Localisation:</span>
+                            <span class="info-value">Belfort, France</span>
+                        </div>
+                    </div>
+                    <a href="assets/FR_CV_Aylan_Haddouchi.pdf" download class="btn primary-btn" data-key="about_cv_btn">Télécharger CV</a>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="skills_title">Mes compétences</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-cards">
+                    <div class="skill-category">
+                        <h4 data-key="skills_web_dev">Développement</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="HTML5">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <h5>HTML5</h5>
+                            </div>
+                            <div class="skill-item" data-skill="CSS3">
+                                <div class="skill-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <h5>CSS3</h5>
+                            </div>
+                            <div class="skill-item" data-skill="JavaScript">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <h5>JavaScript</h5>
+                            </div>
+                            <div class="skill-item" data-skill="SQL">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h5>SQL</h5>
+                            </div>
+                            <div class="skill-item" data-skill="Bootstrap">
+                                <div class="skill-icon">
+                                    <i class="fab fa-bootstrap"></i>
+                                </div>
+                                <h5>Bootstrap</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 data-key="skills_programming">Programmation</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Python">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <h5>Python</h5>
+                            </div>
+                            <div class="skill-item" data-skill="Java">
+                                <div class="skill-icon">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <h5>Java</h5>
+                            </div>
+                            <div class="skill-item" data-skill="C++">
+                                <div class="skill-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h5>C</h5>
+                            </div>
+                            <div class="skill-item" data-skill="Shell">
+                                <div class="skill-icon">
+                                    <i class="fas fa-terminal"></i>
+                                </div>
+                                <h5>Shell</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 data-key="skills_tools">Outils & Technologies</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Git">
+                                <div class="skill-icon">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                                <h5>Git</h5>
+                            </div>
+                            <div class="skill-item" data-skill="Figma">
+                                <div class="skill-icon">
+                                    <i class="fab fa-figma"></i>
+                                </div>
+                                <h5>Figma</h5>
+                            </div>
+                            <div class="skill-item" data-skill="VSCode">
+                                <div class="skill-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h5>VS Code</h5>
+                            </div>
+                            <div class="skill-item" data-skill="Docker">
+                                <div class="skill-icon">
+                                    <i class="fab fa-docker"></i>
+                                </div>
+                                <h5>Docker</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 data-key="skills_soft">Compétences Transversales</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Teamwork">
+                                <div class="skill-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h5>Travail d'équipe</h5>
+                            </div>
+                            <div class="skill-item" data-skill="Problem-Solving">
+                                <div class="skill-icon">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                </div>
+                                <h5>Résolution de problèmes</h5>
+                            </div>
+                            <div class="skill-item" data-skill="Communication">
+                                <div class="skill-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <h5>Communication</h5>
+                            </div>
+                            <div class="skill-item" data-skill="Adaptability">
+                                <div class="skill-icon">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                                <h5>Adaptabilité</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="projects_title">Mes projets</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all" data-key="projects_all">Tous</button>
+                <button class="filter-btn" data-filter="web" data-key="projects_web">Web</button>
+                <button class="filter-btn" data-filter="Processing" data-key="projects_processing">Traitements</button>
+                <button class="filter-btn" data-filter="design" data-key="projects_games">Jeux</button>
+                <button class="filter-btn" data-filter="other" data-key="projects_other">Autres</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-item" data-category="web">
+                    <div class="project-img">
+                        <div class="project-illustration" data-color="1" >
+                            <img src="images/Cablissimo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category" data-key="project1_category">Web</div>
+                        <h3 class="project-title" data-key="project1_title">Application web de gestion de Stock</h3>
+                        <p class="project-description" data-key="project1_description">Une application web moderne pour gérer efficacement les stocks de câbles et de composants électroniques.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
+                            <span>Flask</span>
+                            <span>SQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn project-btn" data-project="0" data-key="projects_details_btn">Détails du projet</a>
+                            <a href="https://github.com/aylanh45pro/FlaskWebApp1" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item" data-category="Processing">
+                    <div class="project-img">
+                        <div class="project-illustration" data-color="2">
+                            <i class="fas fa-music"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category" data-key="project2_category">Processing</div>
+                        <h3 class="project-title" data-key="project2_title">Vocodeur</h3>
+                        <p class="project-description" data-key="project2_description">Application de traitement audio permettant de manipuler et transformer des fichiers sonores avec des effets de vocodeur.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>StdDraw</span>
+                            <span>Audio Processing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn project-btn" data-project="1" data-key="projects_details_btn">Détails du projet</a>
+                            <a href="https://github.com/aylanh45pro/VocodeurAH" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item" data-category="design">
+                    <div class="project-img">
+                        <div class="project-illustration" data-color="3">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category" data-key="project3_category">Jeux</div>
+                        <h3 class="project-title" data-key="project3_title">Jeu de Plateforme 2D</h3>
+                        <p class="project-description" data-key="project3_description">Un jeu de plateforme 2D développé avec JavaScript et la bibliothèque Phaser.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Phaser</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn project-btn" data-project="2" data-key="projects_details_btn">Détails du projet</a>
+                            <a href="https://github.com/aylanh45pro/VenD-RSite" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://lafaymehdi.github.io/ProjetMelvyn-EComVenD-R/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item" data-category="web">
+                    <div class="project-img">
+                        <div class="project-illustration" data-color="4">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category" data-key="project4_category">Web</div>
+                        <h3 class="project-title" data-key="project4_title">Site Web Cablissimmo</h3>
+                        <p class="project-description" data-key="project4_description">Plateforme e-commerce complète de vente de cables avec système de panier, paiement en ligne et gestion des commandes.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn project-btn" data-project="3" data-key="projects_details_btn">Détails du projet</a>
+                            <a href="https://github.com/aylanh45pro/OvhCloudSite" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="education_title">Formation & Expérience</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="timeline">
+                <!-- Alternance -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline-date">2025 - Aujourd'hui</div>
+                    <div class="timeline-content">
+                        <h3>Alternance - Développeur Full Stack</h3>
+                        <h4>SOTAX - Belfort, France</h4>
+                        <p>Développement d'applications web et logicielles pour l'entreprise. Participation à des projets clients et intégration dans une équipe de développeurs expérimentés.</p>
+                        <ul class="timeline-skills">
+                            <li>Développement front-end et back-end</li>
+                            <li>Travail en équipe avec méthodologie Agile</li>
+                            <li>Intégration continue et déploiement</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- BUT Informatique -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-date">2025 - 2027</div>
+                    <div class="timeline-content">
+                        <h3>BUT Informatique</h3>
+                        <h4>IUT de Belfort - Université de Franche-Comté</h4>
+                        <p>Formation généraliste en informatique avec des projets pratiques en programmation, bases de données et développement web et logiciel.</p>
+                        <ul class="timeline-skills">
+                            <li>Programmation orientée objet</li>
+                            <li>Développement web</li>
+                            <li>Bases de données</li>
+                            <li>Réseaux et systèmes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Baccalauréat -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-date">2023 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>Baccalauréat Général</h3>
+                        <h4>Lycée Benjamin Franklin - Orléans, France</h4>
+                        <p>Spécialités Mathématiques, Numérique et Sciences Informatiques (NSI), et Sciences de l'Ingénieur. Mention Bien.</p>
+                        <ul class="timeline-skills">
+                            <li>Algorithmique et programmation</li>
+                            <li>Mathématiques appliquées</li>
+                            <li>Projets informatiques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2 data-aos="fade-up" data-i18n="contact.title">Contact</h2>
-        <div class="contact-content">
-            <div class="contact-item" data-aos="fade-right" data-aos-delay="100">
-                <i class="fas fa-envelope"></i>
-                <h3 data-i18n="contact.email">Email</h3>
-                <a href="mailto:aylan.haddouchi@edu.univ-fcomte.fr">
-                    aylan.haddouchi@edu.univ-fcomte.fr
-                </a>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="contact_title">Me contacter</h2>
+                <div class="section-line"></div>
             </div>
-            <div class="contact-item" data-aos="fade-right" data-aos-delay="200">
-                <i class="fab fa-linkedin"></i>
-                <h3 data-i18n="contact.linkedin">LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/aylan-haddouchi-a60768309/" target="_blank" rel="noopener noreferrer" data-i18n="contact.linkedin_link">
-                    Voir mon profil LinkedIn
-                </a>
-            </div>
-            <div class="contact-item" data-aos="fade-right" data-aos-delay="300">
-                <i class="fab fa-github"></i>
-                <h3 data-i18n="contact.github">GitHub</h3>
-                <a href="https://github.com/aylanh45pro" target="_blank" rel="noopener noreferrer" data-i18n="contact.github_link">
-                    Voir mon profil GitHub
-                </a>
-            </div>
-            <div class="contact-item aos-init aos-animate" data-aos="fade-right" data-aos-delay="400" data-aos-offset="0" data-aos-once="false">
-                <i class="fas fa-file-alt"></i>
-                <h3 data-i18n="contact.cv">CV</h3>
-                <div class="cv-download">
-                    <a href="chemin/vers/cv-fr.pdf" target="_blank" data-i18n="contact.cv_fr">
-                        <i class="fas fa-download"></i>
-                        <span>CV Français</span>
-                    </a>
-                    <a href="chemin/vers/cv-en.pdf" target="_blank" data-i18n="contact.cv_en">
-                        <i class="fas fa-download"></i>
-                        <span>CV English</span>
-                    </a>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-key="contact_subtitle">Restons en contact</h3>
+                    <p data-key="contact_description">N'hésitez pas à me contacter pour discuter de projets, d'opportunités ou simplement pour échanger sur le domaine de l'informatique.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 data-key="contact_location">Localisation</h4>
+                                <p>Belfort, France</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 data-key="contact_email">Email</h4>
+                                <p>aylan.haddouchi@edu.univ-fcomte.fr</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 data-key="contact_phone">Téléphone</h4>
+                                <p>Disponible sur demande</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/aylanh45pro" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/aylan-haddouchi-a60768309/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:aylan.haddouchi@edu.univ-fcomte.fr" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+                        </div>
+                        <div class="form-privacy">
+                            <p class="privacy-notice" data-key="contact_privacy">Vos données personnelles ne seront utilisées que pour répondre à votre message et ne seront pas conservées après traitement.</p>
+                        </div>
+                        <button type="submit" class="btn primary-btn" data-key="contact_send">Envoyer le message</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p data-i18n="footer.copyright">&copy; 2024 Portfolio Étudiant. Tous droits réservés.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home">Portfolio<span>.</span></a>
+                </div>
+                <div class="footer-text">
+                    <p data-key="footer_copyright">&copy; 2025 Aylan Haddouchi. Tous droits réservés.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home" data-key="footer_home">Accueil</a>
+                    <a href="#about" data-key="footer_about">À propos</a>
+                    <a href="#skills" data-key="footer_skills">Compétences</a>
+                    <a href="#projects" data-key="footer_projects">Projets</a>
+                    <a href="#education" data-key="footer_education">Formation</a>
+                    <a href="#contact" data-key="footer_contact">Contact</a>
+                </div>
+                <div class="animation-toggle">
+                    <button id="toggle-animation" class="btn secondary-btn" data-key="footer_toggle_animation">Désactiver l'animation d'arrière-plan</button>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="translations.js"></script>
-    <script src="script.js"></script>
+    <!-- Back to Top Button -->
+    <div class="back-to-top" role="button" aria-label="Retour en haut de page" tabindex="0">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </div>
+    
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="dark-mode-toggle" role="button" aria-label="Basculer le mode sombre" tabindex="0">
+        <i class="fas fa-moon" id="dark-mode-icon" aria-hidden="true"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/loading.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/hero-animation.js" defer></script>
+    <script src="js/accessibility.js" defer></script>
+    <script src="js/timeline.js" defer></script>
+    <script src="js/modal-carousel.js" defer></script>
 </body>
-</html> 
+</html>
