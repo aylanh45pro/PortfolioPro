@@ -509,7 +509,7 @@ section {
 .terminal-container {
     width: 100%;
     max-width: 600px;
-    height: 420px;
+    height: 390px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     background-color: #282c34;
