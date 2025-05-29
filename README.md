@@ -1,7 +1,5 @@
 # PortfolioPro
 
-![Portfolio Preview](images/Cablissimo.png)
-
 ## 📋 Description
 
 PortfolioPro est un site web personnel moderne et responsive présentant mes compétences, projets et expériences professionnelles. Conçu avec une attention particulière à l'expérience utilisateur et à l'accessibilité, ce portfolio offre une interface élégante et interactive.
@@ -33,47 +31,6 @@ PortfolioPro est un site web personnel moderne et responsive présentant mes com
 - Safari (dernières versions)
 - Edge (dernières versions)
 - Responsive sur mobile et tablette
-
-## 🚀 Installation et Utilisation
-
-1. Clonez ce dépôt :
-   ```bash
-   git clone https://github.com/aylanh45pro/PortfolioPro.git
-   ```
-
-2. Ouvrez le fichier `index.html` dans votre navigateur ou utilisez un serveur local comme Live Server (VSCode).
-
-## 🔄 Personnalisation
-
-Pour personnaliser ce portfolio pour votre propre usage :
-
-1. Modifiez les informations personnelles dans `index.html`
-2. Ajoutez vos propres projets dans la section projets
-3. Mettez à jour les traductions dans `js/translations.js`
-4. Personnalisez les styles dans les fichiers CSS du dossier `css/`
-5. Remplacez les images dans le dossier `images/`
-
-## 📄 Structure du Projet
-
-```
-├── index.html              # Page principale
-├── css/                    # Styles CSS
-│   ├── style.css           # Styles principaux
-│   ├── dark-mode.css       # Styles pour le mode sombre
-│   ├── loading.css         # Styles pour l'écran de chargement
-│   ├── timeline.css        # Styles pour la timeline
-│   └── modal-carousel.css  # Styles pour les modales et carousel
-├── js/                     # Scripts JavaScript
-│   ├── main.js             # Script principal
-│   ├── translations.js     # Traductions FR/EN
-│   ├── dark-mode.js        # Gestion du mode sombre
-│   ├── loading.js          # Écran de chargement
-│   ├── hero-animation.js   # Animation de la section hero
-│   ├── accessibility.js    # Fonctionnalités d'accessibilité
-│   ├── timeline.js         # Fonctionnalités de la timeline
-│   └── modal-carousel.js   # Gestion des modales et carousel
-└── images/                 # Images et ressources graphiques
-```
 
 ## 🔗 Liens
 
