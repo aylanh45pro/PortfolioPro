@@ -6,21 +6,21 @@ document.addEventListener('DOMContentLoaded', function() {
         return translations[currentLang][key];
     }
 
-    // Donnu00e9es des projets avec traductions
+
     const projectsDataTranslations = {
         fr: [
             {
                 id: 'project1',
-                title: 'Application web de gestion de Stock',
+                title: 'Cablissimo',
                 category: 'Web',
                 description: 'Une application web moderne pour gérer efficacement les stocks de câbles et de composants électroniques. Ce projet a été développé pour simplifier le processus de gestion d\'inventaire pour une entreprise locale.',
-                longDescription: 'Cette application web de gestion de stock a été conçue pour répondre aux besoins spécifiques d\'une entreprise spécialisée dans les câbles et composants électroniques. Elle permet de suivre l\'inventaire en temps réel, de gérer les entrées et sorties de stock, et de générer des rapports détaillés.\n\nLe système comprend une interface utilisateur intuitive, un tableau de bord pour visualiser les données importantes, et des fonctionnalités de recherche avancée pour trouver rapidement des produits spécifiques. J\'ai également implémenté un système d\'alertes pour notifier les utilisateurs lorsque le stock d\'un produit est bas.',
+                longDescription: `Cablissimo est une application web de gestion de stock développée pour une entreprise spécialisée dans la vente de câbles et de composants électroniques. Le projet a débuté par une analyse approfondie des besoins métiers, notamment la gestion multi-rôles (administrateur, client), la sécurité des accès, et la nécessité d'une interface intuitive adaptée à des utilisateurs non techniques.\n\nL'application permet de suivre l'inventaire en temps réel, de gérer les entrées et sorties de stock, de consulter l'historique des mouvements, et de générer des rapports détaillés pour l'analyse des ventes et des stocks. Un tableau de bord dynamique offre une visualisation claire des données clés (stocks faibles, produits populaires, alertes).\n\nLa gestion des utilisateurs inclut des droits différenciés, un système d'authentification sécurisé, et la possibilité pour les clients de passer commande, de suivre leurs livraisons, et de laisser des avis. L'administrateur dispose d'outils avancés pour ajouter/modifier des produits, gérer les commandes, consulter les statistiques, et intervenir sur les avis clients.\n\nLe projet a été réalisé en suivant une architecture MVC avec Flask pour le backend, SQL pour la base de données, et Bootstrap pour le frontend. Un soin particulier a été apporté à la sécurité (hashage des mots de passe, protection CSRF, validation des entrées), à l'accessibilité, et à l'expérience utilisateur (UX/UI).\n\nLa gestion de projet s'est appuyée sur des outils collaboratifs (Git, Trello), avec des sprints hebdomadaires et des revues régulières. J'ai assuré la conception, le développement principal, les tests, la documentation, et la mise en production sur un serveur Linux.\n\nCompétences acquises :\n- Développement web full stack (Flask, HTML/CSS, Bootstrap, JS)\n- Modélisation et gestion de base de données relationnelle (SQL)\n- Sécurité web (authentification, gestion des rôles, validation)\n- Visualisation de données et dataviz\n- Gestion de projet agile, documentation technique\n- Déploiement et maintenance sur serveur\n\nBilan : Le projet a permis d'automatiser et de fiabiliser la gestion des stocks, de réduire les erreurs humaines, et d'améliorer la satisfaction client grâce à une interface moderne et des fonctionnalités avancées.\n\nConclusion : Cablissimo a été une expérience formatrice, combinant analyse métier, développement technique, et gestion de projet, avec un impact concret pour l'entreprise utilisatrice.`,
                 technologies: ['Python', 'HTML', 'CSS', 'Bootstrap', 'Flask', 'SQL'],
                 features: ['Gestion d\'inventaire en temps réel', 'Tableau de bord interactif', 'Système d\'alertes', 'Génération de rapports', 'Recherche avancée'],
                 images: [
-                    { src: 'images/Cablissimo.png', captionKey: 'project1_caption1' },
-                    { src: 'images/projects/project1-2.jpg', captionKey: 'project1_caption2' },
-                    { src: 'images/projects/project1-3.jpg', captionKey: 'project1_caption3' }
+                    { src: 'images/projects/project1-1.png', captionKey: 'project1_caption1' },
+                    { src: 'images/projects/project1-2.png', captionKey: 'project1_caption2' },
+                    { src: 'images/projects/project1-3.png', captionKey: 'project1_caption3' }
                 ],
                 date: 'Janvier 2025',
                 client: 'Projet personnel',
@@ -33,13 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: 'Vocodeur',
                 category: 'Processing',
                 description: 'Application de traitement audio permettant de manipuler et transformer des fichiers sonores avec des effets de vocodeur.',
-                longDescription: 'Ce projet de vocodeur est une application de traitement audio avancée qui permet aux utilisateurs de manipuler et transformer des fichiers sonores. Le vocodeur analyse le signal audio et applique diverses transformations pour créer des effets sonores uniques.\n\nJ\'ai implémenté plusieurs algorithmes de traitement du signal pour permettre des fonctionnalités comme la modification de la hauteur, l\'ajout d\'effets de réverbération, et la création d\'effets de voix robotiques. L\'application dispose d\'une interface graphique intuitive qui permet aux utilisateurs de visualiser le signal audio en temps réel et d\'ajuster les paramètres des effets.',
+                longDescription: `Le projet Vocodeur est une application Java de traitement audio avancé, développée dans le cadre d'un projet universitaire. L'objectif était de concevoir un outil capable de manipuler des signaux sonores, d'appliquer des effets de vocodeur, et de proposer une interface à la fois console et graphique.\n\nAprès une phase de recherche sur les techniques de traitement du signal, j'ai implémenté plusieurs algorithmes : modification de la hauteur, effets de réverbération, filtrage, et création de voix robotiques. L'application permet de charger des fichiers audio, de visualiser le spectre en temps réel, et d'exporter les résultats dans différents formats.\n\nL'architecture suit le modèle MVC, avec une séparation claire entre la logique de traitement, l'interface utilisateur, et la gestion des fichiers. L'interface graphique (StdDraw) offre une visualisation dynamique du signal et des contrôles pour ajuster les paramètres des effets.\n\nLe projet a nécessité une gestion rigoureuse de la mémoire et des performances, le traitement audio en temps réel imposant des contraintes fortes. J'ai également mis en place des tests unitaires pour valider la robustesse des algorithmes.\n\nCompétences acquises :\n- Traitement du signal audio en Java\n- Algorithmique avancée (FFT, filtrage, effets)\n- Conception orientée objet et architecture MVC\n- Développement d'interfaces graphiques\n- Gestion de fichiers audio (lecture, écriture, conversion)\n- Travail en équipe et gestion de versions (Git)\n\nBilan : Le projet a permis de maîtriser les bases du traitement audio numérique, d'approfondir la programmation Java, et de livrer un outil fonctionnel et performant.\n\nConclusion : Vocodeur a été un défi technique stimulant, combinant mathématiques, algorithmique, et développement logiciel, avec une forte dimension créative.`,
                 technologies: ['Java', 'StdDraw', 'Audio Processing'],
                 features: ['Modification de la hauteur', 'Effets de réverbération', 'Visualisation du signal audio', 'Exportation en divers formats'],
                 images: [
-                    { src: 'images/projects/project2-1.jpg', captionKey: 'project2_caption1' },
-                    { src: 'images/projects/project2-2.jpg', captionKey: 'project2_caption2' },
-                    { src: 'images/projects/project2-3.jpg', captionKey: 'project2_caption3' }
+                    { src: 'images/projects/project2-1.png', captionKey: 'project2_caption1' },
+                    { src: 'images/projects/project2-2.png', captionKey: 'project2_caption2' },
+                    { src: 'images/projects/project2-3.png', captionKey: 'project2_caption3' }
                 ],
                 date: 'Mars 2025',
                 client: 'Projet universitaire',
@@ -52,13 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: 'Site E-Commerce',
                 category: 'Web',
                 description: 'Plateforme e-commerce complète avec système de panier, paiement en ligne et gestion des commandes.',
-                longDescription: 'Ce site e-commerce est une plateforme complète que j\'ai développée pour permettre aux entreprises de vendre leurs produits en ligne. Le site comprend toutes les fonctionnalités essentielles d\'une boutique en ligne moderne, notamment un catalogue de produits, un système de panier d\'achat, et des options de paiement sécurisu00e9es.\n\nJ\'ai mis l\'accent sur l\'expérience utilisateur en créant une interface intuitive et responsive qui s\'adapte à tous les appareils. Le panneau d\'administration permet aux propriétaires de boutique de gérer facilement leurs produits, leurs commandes et leurs clients.',
+                longDescription: `Le site E-Commerce est une plateforme web complète développée pour simuler la gestion d'une boutique en ligne. Le projet couvre l'ensemble du cycle de vente : catalogue produits, gestion du panier, commandes, paiement sécurisé, et administration.\n\nL'accent a été mis sur l'expérience utilisateur : interface responsive, navigation fluide, filtres de recherche, et accessibilité. Le back-office permet à l'administrateur de gérer les produits, suivre les commandes, consulter les statistiques de vente, et modérer les avis clients.\n\nLe développement a impliqué la création d'une base de données relationnelle (MySQL), la sécurisation des transactions (validation des entrées, gestion des sessions, protection contre les injections), et l'intégration de Bootstrap pour un design moderne.\n\nLa gestion de projet a suivi une méthodologie agile, avec des itérations courtes, des tests réguliers, et une documentation détaillée.\n\nCompétences acquises :\n- Développement web full stack (PHP, JS, HTML/CSS, Bootstrap)\n- Modélisation de base de données et requêtes SQL avancées\n- Sécurité des applications web\n- UX/UI et accessibilité\n- Gestion de projet, documentation, tests\n\nBilan : Le projet a permis de comprendre les enjeux d'une boutique en ligne, d'intégrer des fonctionnalités avancées, et de livrer une solution robuste et évolutive.\n\nConclusion : Ce site e-commerce a été l'occasion de mettre en pratique l'ensemble du cycle de développement web, de la conception à la mise en production, avec une forte dimension utilisateur.`,
                 technologies: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'PHP', 'MySQL'],
                 features: ['Catalogue de produits', 'Système de panier', 'Paiement en ligne', 'Gestion des commandes', 'Panneau d\'administration'],
                 images: [
-                    { src: 'images/projects/project3-1.jpg', captionKey: 'project3_caption1' },
-                    { src: 'images/projects/project3-2.jpg', captionKey: 'project3_caption2' },
-                    { src: 'images/projects/project3-3.jpg', captionKey: 'project3_caption3' }
+                    { src: 'images/projects/project3-1.png', captionKey: 'project3_caption1' },
+                    { src: 'images/projects/project3-2.png', captionKey: 'project3_caption2' },
+                    { src: 'images/projects/project3-3.png', captionKey: 'project3_caption3' }
                 ],
                 date: 'Avril 2025',
                 client: 'Projet universitaire',
@@ -68,21 +68,21 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 id: 'project4',
-                title: 'Algorithme d\'intelligence artificielle',
-                category: 'Autres',
-                description: 'Implémentation d\'un algorithme d\'apprentissage automatique pour la classification d\'images.',
-                longDescription: 'Ce projet d\'intelligence artificielle se concentre sur le développement d\'un algorithme de classification d\'images utilisant des techniques d\'apprentissage automatique avancées. J\'ai implémenté un réseau de neurones convolutif (CNN) pour identifier et catégoriser différents objets dans des images.\n\nLe modèle a été entraîné sur un large ensemble de données et a atteint une précision de classification élevée. J\'ai également développé une interface utilisateur simple permettant de télécharger des images et de visualiser les résultats de la classification en temps réel.',
-                technologies: ['Python', 'TensorFlow', 'Machine Learning', 'OpenCV', 'NumPy'],
-                features: ['Classification d\'images', 'Réseau de neurones convolutif', 'Visualisation des résultats', 'Interface utilisateur simple'],
+                title: 'Puissance X',
+                category: 'Jeu',
+                description: 'Jeu Java console et graphique (MVC) : grille personnalisable, IA, mode multijoueur, architecture modulaire, expérience utilisateur, travail en équipe.',
+                longDescription: `Puissance X est un jeu développé en Java, combinant une interface console et graphique, dans le cadre d'un projet collaboratif universitaire. L'objectif était de concevoir un jeu de type Puissance 4 étendu, avec grille personnalisable, intelligence artificielle, et mode multijoueur.\n\nLe projet a débuté par la définition des règles, la modélisation des classes (MVC), et la répartition des tâches au sein de l'équipe. J'ai participé à la conception de l'architecture logicielle, à l'implémentation du moteur de jeu, et à la création de l'interface graphique avec JavaFX.\n\nLes fonctionnalités incluent : choix du nombre de lignes/colonnes, IA de différents niveaux, sauvegarde/chargement de parties, gestion des scores, et personnalisation des couleurs. L'accent a été mis sur la robustesse du code, la modularité, et la qualité de l'expérience utilisateur.\n\nLa collaboration a nécessité l'utilisation de Git pour la gestion de versions, des réunions régulières, et une documentation partagée.\n\nCompétences acquises :\n- Programmation Java avancée\n- Architecture MVC et conception modulaire\n- Développement d'IA (algorithmes de jeu, heuristiques)\n- Interfaces graphiques (JavaFX)\n- Travail en équipe, gestion de projet\n\nBilan : Le projet a permis de développer des compétences en conception logicielle, en algorithmique, et en gestion de projet collaboratif.\n\nConclusion : Puissance X a été une expérience enrichissante, mêlant technique, créativité, et esprit d'équipe, avec un résultat final abouti et réutilisable.`,
+                technologies: ['Java', 'JavaFX', 'Algorithmique', 'Travail d\'équipe'],
+                features: ['Grille personnalisable', 'IA multilevel', 'Mode multijoueur', 'Interface graphique', 'Gestion des scores'],
                 images: [
-                    { src: 'images/projects/project4-1.jpg', captionKey: 'project4_caption1' },
-                    { src: 'images/projects/project4-2.jpg', captionKey: 'project4_caption2' },
-                    { src: 'images/projects/project4-3.jpg', captionKey: 'project4_caption3' }
+                    { src: 'images/projects/project3-1.jpg', captionKey: 'project3_caption1' },
+                    { src: 'images/projects/project3-2.jpg', captionKey: 'project3_caption2' },
+                    { src: 'images/projects/project3-3.jpg', captionKey: 'project3_caption3' }
                 ],
-                date: 'Juin 2025',
-                client: 'Projet personnel',
-                role: 'Développeur IA',
-                github: 'https://github.com/aylanh45pro',
+                date: 'Mai 2025',
+                client: 'Projet universitaire',
+                role: 'Développeur Java',
+                github: '#',
                 demo: '#'
             }
         ],
@@ -96,9 +96,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 technologies: ['Python', 'HTML', 'CSS', 'Bootstrap', 'Flask', 'SQL'],
                 features: ['Real-time inventory management', 'Interactive dashboard', 'Alert system', 'Report generation', 'Advanced search'],
                 images: [
-                    { src: 'images/Cablissimo.png', caption: 'Main application page' },
-                    { src: 'images/projects/project1-2.jpg', caption: 'Admin dashboard' },
-                    { src: 'images/projects/project1-3.jpg', caption: 'Stock management interface' }
+                    { src: 'images/projects/project1-1.png', caption: 'Main application page' },
+                    { src: 'images/projects/project1-2.png', caption: 'Admin dashboard' },
+                    { src: 'images/projects/project1-3.png', caption: 'Stock management interface' }
                 ],
                 date: 'January 2025',
                 client: 'Personal project',
@@ -115,9 +115,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 technologies: ['Java', 'StdDraw', 'Audio Processing'],
                 features: ['Pitch modification', 'Reverb effects', 'Audio signal visualization', 'Export in various formats'],
                 images: [
-                    { src: 'images/projects/project2-1.jpg', caption: 'Main vocoder interface' },
-                    { src: 'images/projects/project2-2.jpg', caption: 'Audio signal visualization' },
-                    { src: 'images/projects/project2-3.jpg', caption: 'Effect parameters' }
+                    { src: 'images/projects/project2-1.png', caption: 'Main vocoder interface' },
+                    { src: 'images/projects/project2-2.png', caption: 'Audio signal visualization' },
+                    { src: 'images/projects/project2-3.png', caption: 'Effect parameters' }
                 ],
                 date: 'March 2025',
                 client: 'University project',
@@ -134,9 +134,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 technologies: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'PHP', 'MySQL'],
                 features: ['Product catalog', 'Shopping cart system', 'Online payment', 'Order management', 'Admin panel'],
                 images: [
-                    { src: 'images/projects/project3-1.jpg', caption: 'Website homepage' },
-                    { src: 'images/projects/project3-2.jpg', caption: 'Product page' },
-                    { src: 'images/projects/project3-3.jpg', caption: 'Shopping cart' }
+                    { src: 'images/projects/project3-1.png', caption: 'Website homepage' },
+                    { src: 'images/projects/project3-2.png', caption: 'Product page' },
+                    { src: 'images/projects/project3-3.png', caption: 'Shopping cart' }
                 ],
                 date: 'April 2025',
                 client: 'University project',
@@ -153,9 +153,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 technologies: ['Python', 'TensorFlow', 'Machine Learning', 'OpenCV', 'NumPy'],
                 features: ['Image classification', 'Convolutional neural network', 'Results visualization', 'Simple user interface'],
                 images: [
-                    { src: 'images/projects/project4-1.jpg', caption: 'Image classification interface' },
-                    { src: 'images/projects/project4-2.jpg', caption: 'Neural network layer visualization' },
-                    { src: 'images/projects/project4-3.jpg', caption: 'Classification results' }
+                    { src: 'images/projects/project4-1.png', caption: 'Image classification interface' },
+                    { src: 'images/projects/project4-2.png', caption: 'Neural network layer visualization' },
+                    { src: 'images/projects/project4-3.png', caption: 'Classification results' }
                 ],
                 date: 'June 2025',
                 client: 'Personal project',

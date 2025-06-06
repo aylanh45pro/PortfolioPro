@@ -12,7 +12,7 @@ const translations = {
         // Hero section
         hero_greeting: "Bonjour, je suis",
         hero_student: "Étudiant en",
-        hero_description: "Passionné par le développement web et les nouvelles technologies.",
+        hero_description: "Passionné par l'informatique' et les nouvelles technologies.",
         hero_projects_btn: "Voir mes projets",
         hero_contact_btn: "Me contacter",
         
@@ -52,8 +52,8 @@ const translations = {
         
         // Project 1
         project1_category: "Web",
-        project1_title: "Application web de gestion de Stock",
-        project1_description: "Une application web moderne pour gérer efficacement les stocks de câbles et de composants électroniques.",
+        project1_title: "Cablissimo",
+        project1_description: "Une application web pour faire un site web de e-commerce les stocks de câbles .",
         
         // Project 2
         project2_category: "Processing",
@@ -93,24 +93,24 @@ const translations = {
         modal_view_demo: "Démo en ligne",
         
         // Project 1 Modal
-        project1_caption1: "Page principale de l'application",
-        project1_caption2: "Tableau de bord administrateur",
-        project1_caption3: "Interface de gestion des stocks",
+        project1_caption1: "Figure 1 : Page principale de l'application",
+        project1_caption2: "Figure 2 : Tableau de bord administrateur",
+        project1_caption3: "Figure 3 : Interface de gestion des stocks",
         
         // Project 2 Modal
-        project2_caption1: "Interface principale du vocodeur",
-        project2_caption2: "Visualisation du signal audio",
-        project2_caption3: "Paramètres des effets",
+        project2_caption1: "Figure 1 : Interface principale du vocodeur",
+        project2_caption2: "Figure 2 : Visualisation du signal audio",
+        project2_caption3: "Figure 3 : Paramètres des effets",
         
         // Project 3 Modal
-        project3_caption1: "Page d'accueil du site",
-        project3_caption2: "Page de produit",
-        project3_caption3: "Panier d'achat",
+        project3_caption1: "Figure 1 : Page d'accueil du site",
+        project3_caption2: "Figure 2 : Page de produit",
+        project3_caption3: "Figure 3 : Panier d'achat",
         
         // Project 4 Modal
-        project4_caption1: "Interface de classification d'images",
-        project4_caption2: "Visualisation des couches du réseau neuronal",
-        project4_caption3: "Résultats de classification",
+        project4_caption1: "Figure 1 : Interface de classification d'images",
+        project4_caption2: "Figure 2 : Visualisation des couches du réseau neuronal",
+        project4_caption3: "Figure 3 : Résultats de classification",
         
         // Education section
         education_title: "Formation",
@@ -150,7 +150,7 @@ const translations = {
         terminal_title: "portfolio@user: ~/projects",
         terminal_commands: [
             { command: 'whoami', output: 'Aylan Haddouchi - Étudiant en BUT Informatique' },
-            { command: 'ls -la projects/', output: 'total 6\ndrwxr-xr-x  2 portfolio user 4096 web-development\ndrwxr-xr-x  2 portfolio user 4096 mobile-apps\ndrwxr-xr-x  2 portfolio user 4096 machine-learning\n-rw-r--r--  1 portfolio user 8892 portfolio.html\n-rw-r--r--  1 portfolio user 5432 e-commerce.js\n-rw-r--r--  1 portfolio user 3211 weather-app.py' },
+            { command: 'ls -la projects/', output: 'total 4\ndrwxr-xr-x  2 portfolio user 4096 Site web e-commerce\n-rwxr-xr-x  2 portfolio user 4096 App de traitement audio\n-rwxr-xr-x  2 portfolio user 4096 App de gestion de stock\n-rw-r--r--  1 portfolio user 8892 PuissanceX ' },
             { command: 'cat skills.txt', output: 'HTML5, CSS3, JavaScript, C, Python, Java, SQL, Git' }
         ],
         
@@ -169,7 +169,7 @@ const translations = {
         // Hero section
         hero_greeting: "Hello, I am",
         hero_student: "Student in",
-        hero_description: "Passionate about web development and new technologies.",
+        hero_description: "Passionate about computer sciences and new technologies.",
         hero_projects_btn: "View my projects",
         hero_contact_btn: "Contact me",
         
@@ -250,24 +250,24 @@ const translations = {
         modal_view_demo: "Online demo",
         
         // Project 1 Modal
-        project1_caption1: "Main application page",
-        project1_caption2: "Admin dashboard",
-        project1_caption3: "Stock management interface",
+        project1_caption1: "Figure 1 : Main application page",
+        project1_caption2: "Figure 2 : Admin dashboard",
+        project1_caption3: "Figure 3 : Stock management interface",
         
         // Project 2 Modal
-        project2_caption1: "Main vocoder interface",
-        project2_caption2: "Audio signal visualization",
-        project2_caption3: "Effect parameters",
+        project2_caption1: "Figure 1 : Main vocoder interface",
+        project2_caption2: "Figure 2 : Audio signal visualization",
+        project2_caption3: "Figure 3 : Effect parameters",
         
         // Project 3 Modal
-        project3_caption1: "Website homepage",
-        project3_caption2: "Product page",
-        project3_caption3: "Shopping cart",
+        project3_caption1: "Figure 1 : Website homepage",
+        project3_caption2: "Figure 2 : Product page",
+        project3_caption3: "Figure 3 : Shopping cart",
         
         // Project 4 Modal
-        project4_caption1: "Image classification interface",
-        project4_caption2: "Neural network layer visualization",
-        project4_caption3: "Classification results",
+        project4_caption1: "Figure 1 : Image classification interface",
+        project4_caption2: "Figure 2 : Neural network layer visualization",
+        project4_caption3: "Figure 3 : Classification results",
         
         // Education section
         education_title: "Education",
@@ -307,7 +307,7 @@ const translations = {
         terminal_title: "portfolio@user: ~/projects",
         terminal_commands: [
             { command: 'whoami', output: 'Aylan Haddouchi - Computer Science Student' },
-            { command: 'ls -la projects/', output: 'total 6\ndrwxr-xr-x  2 portfolio user 4096 web-development\ndrwxr-xr-x  2 portfolio user 4096 mobile-apps\ndrwxr-xr-x  2 portfolio user 4096 machine-learning\n-rw-r--r--  1 portfolio user 8892 portfolio.html\n-rw-r--r--  1 portfolio user 5432 e-commerce.js\n-rw-r--r--  1 portfolio user 3211 weather-app.py' },
+            { command: 'ls -la projects/', output: 'total 4\ndrwxr-xr-x  2 portfolio user 4096 e-commerce website\n-rwxr-xr-x  2 portfolio user 4096 audio processing app\n-rwxr-xr-x  2 portfolio user 4096 stock management app\n-rw-r--r--  1 portfolio user 8892 PuissanceX ' },
             { command: 'cat skills.txt', output: 'HTML5, CSS3, JavaScript, C, Python, Java, SQL, Git' }
         ],
         
