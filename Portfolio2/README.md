@@ -1,82 +1,51 @@
-# Portfolio Étudiant
+# PortfolioPro
 
-Un portfolio moderne et élégant pour présenter vos projets et compétences en tant qu'étudiant.
+## 📋 Description
 
-## Fonctionnalités
+PortfolioPro est un site web personnel moderne et responsive présentant mes compétences, projets et expériences professionnelles. Conçu avec une attention particulière à l'expérience utilisateur et à l'accessibilité, ce portfolio offre une interface élégante et interactive.
 
-- Design moderne et responsive
-- Animations fluides avec AOS (Animate On Scroll)
-- Section projets avec modal détaillé
-- Section compétences avec icônes
-- Formulaire de contact
-- Navigation fluide
-- Thème clair et professionnel
+## ✨ Fonctionnalités
 
-## Technologies utilisées
+- **Design Responsive** : S'adapte parfaitement à tous les appareils (mobile, tablette, desktop)
+- **Mode Sombre/Clair** : Interface adaptable aux préférences visuelles de l'utilisateur
+- **Multilingue** : Support complet français/anglais
+- **Animation Interactive** : Éléments animés pour une expérience utilisateur engageante
+- **Accessibilité** : Conforme aux normes WCAG pour une meilleure accessibilité
+- **Formulaire de Contact** : Permet aux visiteurs d'envoyer des messages directement
+- **Galerie de Projets** : Présentation détaillée des projets avec filtres par catégorie
+- **Timeline** : Chronologie interactive pour présenter mon parcours académique et professionnel
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- AOS (Animate On Scroll)
-- Font Awesome (pour les icônes)
+## 🛠️ Technologies Utilisées
 
-## Installation
+- **HTML5** / **CSS3** / **JavaScript** (Vanilla)
+- **Responsive Design** sans framework (CSS Grid & Flexbox)
+- **Font Awesome** pour les icônes
+- **Google Fonts** pour la typographie
+- **ScrollReveal** pour les animations au défilement
+- **Typed.js** pour l'effet de texte tapé
 
-1. Clonez ce dépôt :
-```bash
-git clone [URL_DU_REPO]
-```
+## 📱 Compatibilité
 
-2. Ouvrez le fichier `index.html` dans votre navigateur
+- Chrome (dernières versions)
+- Firefox (dernières versions)
+- Safari (dernières versions)
+- Edge (dernières versions)
+- Responsive sur mobile et tablette
 
-## Personnalisation
+## 🔗 Liens
 
-### Projets
+- [Portfolio en ligne](https://aylanh45pro.github.io/PortfolioPro/)
+- [GitHub](https://github.com/aylanh45pro)
+- [LinkedIn](https://www.linkedin.com/in/aylan-haddouchi-a60768309/)
 
-Pour ajouter ou modifier des projets, modifiez l'objet `projectsData` dans le fichier `script.js` :
+## 📝 Licence
 
-```javascript
-const projectsData = {
-    1: {
-        title: "Titre du projet",
-        description: "Description détaillée",
-        image: "URL_de_l_image",
-        technologies: ["Tech1", "Tech2", "Tech3"]
-    },
-    // Ajoutez d'autres projets...
-};
-```
+Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
-### Styles
+## 👤 Contact
 
-Les variables CSS principales sont définies dans le fichier `styles.css` :
+Aylan Haddouchi - [aylan.haddouchi@edu.univ-fcomte.fr](mailto:aylan.haddouchi@edu.univ-fcomte.fr)
 
-```css
-:root {
-    --primary-color: #4a90e2;
-    --secondary-color: #2c3e50;
-    --background-color: #ffffff;
-    --text-color: #333333;
-    --accent-color: #e74c3c;
-}
-```
+---
 
-Modifiez ces variables pour personnaliser les couleurs du site.
-
-## Structure des fichiers
-
-```
-portfolio/
-├── index.html
-├── styles.css
-├── script.js
-└── README.md
-```
-
-## Contribution
-
-Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou à soumettre une pull request.
-
-## Licence
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails. 
+© 2025 Aylan Haddouchi. Tous droits réservés.

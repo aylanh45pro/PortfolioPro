@@ -1,0 +1,137 @@
+Plan d'Action Détaillé pour la Création des Illustrations de Projets
+
+Rappel important :
+*   Pour les scripts Python, installez matplotlib : `pip install matplotlib` (ou `pip3 install matplotlib`).
+*   Les images générées par Python seront sauvegardées dans `images/projects/generated/`.
+*   Pour les illustrations à faire avec Figma (ou un outil similaire), les étapes décrivent ce que vous devez concevoir dans l'outil.
+
+---
+
+**Projet 1: Cablissimo (Application de gestion de stock)**
+
+1.  **Illustration 1: Tableau de bord analytique et interactif**
+    *   Objectif : Montrer votre capacité à synthétiser des données et à créer des interfaces utilisateur utiles.
+    *   Outil recommandé : Figma (pour un look d'interface moderne).
+    *   Quoi faire (dans Figma) :
+        1.  Créez un cadre (ex: 800x600px). Titre : "Tableau de Bord - Cablissimo".
+        2.  Structurez avec une zone principale pour 2-3 graphiques et une zone pour des indicateurs clés (KPIs).
+        3.  KPIs : Créez 2-3 "cartes" stylisées (ex: "Valeur Totale Stock : €XX,XXX", "Alertes Actives : Y").
+        4.  Graphique 1 (Courbe) : Simulez une courbe d'évolution (ex: "Évolution Mensuelle du Stock"). Axes simples, une ligne de tendance.
+        5.  Graphique 2 (Barres/Circulaire) : Simulez un diagramme en barres ou circulaire (ex: "Répartition par Catégorie").
+        6.  Utilisez des polices claires et une palette de couleurs professionnelle.
+        7.  Exportez en `cablissimo_dashboard.png` dans `images/projects/`.
+
+2.  **Illustration 2: Architecture MVC et interaction Base de Données**
+    *   Objectif : Démontrer votre compréhension des design patterns et de la structuration de code.
+    *   Outil recommandé : Python avec Matplotlib.
+    *   Quoi faire (Python) : Le script `python_image_generators/generer_mvc_cablissimo.py` (déjà créé) fait cela. Il dessine des boîtes pour Vue, Contrôleur, Modèle, BDD et les relie avec des flèches annotées. L'image est `images/projects/generated/cablissimo_mvc_diagram.png`.
+
+3.  **Illustration 3: Gestion d'inventaire en temps réel**
+    *   Objectif : Illustrer le développement de fonctionnalités métier complexes.
+    *   Outil recommandé : Figma.
+    *   Quoi faire (dans Figma) :
+        1.  Créez un cadre (ex: 800x450px). Titre : "Gestion d'Inventaire - Cablissimo".
+        2.  Simulez un tableau avec les colonnes : "Nom Produit", "Quantité en Stock", "Statut".
+        3.  Ajoutez 3-4 lignes de produits factices.
+        4.  Pour "Statut", utilisez des indicateurs visuels (ex: pastilles de couleur vert/orange/rouge ou texte "En Stock", "Stock Bas").
+        5.  Ajoutez une maquette de barre de recherche au-dessus du tableau.
+        6.  Exportez en `cablissimo_inventory.png` dans `images/projects/`.
+
+---
+
+**Projet 2: Vocodeur (Application de traitement audio)**
+
+1.  **Illustration 1: Manipulation avancée du signal audio (FFT, Filtrage)**
+    *   Objectif : Montrer votre maîtrise technique du traitement du signal.
+    *   Outil recommandé : Python avec Matplotlib.
+    *   Quoi faire (Python - script à créer : `generer_signal_processing_vocodeur.py`) :
+        *   Créera une figure avec deux sous-graphiques.
+        *   Sous-graphique 1 : "Signal Original" (ex: une onde sinusoïdale).
+        *   Sous-graphique 2 : "Signal Filtré" (l'onde modifiée) OU "Spectre Fréquentiel (FFT)".
+        *   Titre général : "Traitement du Signal Audio - Vocodeur".
+        *   Image de sortie : `vocodeur_signal_processing.png` dans `images/projects/generated/`.
+
+2.  **Illustration 2: Interface graphique interactive pour le contrôle des effets**
+    *   Objectif : Démontrer vos compétences en développement d'interfaces graphiques techniques.
+    *   Outil recommandé : Figma.
+    *   Quoi faire (dans Figma) :
+        1.  Créez un cadre (ex: 600x500px). Titre : "Interface Contrôle Vocodeur".
+        2.  Zone principale : Un espace pour une visualisation d'onde sonore ou de spectrogramme (stylisée).
+        3.  Panneau de contrôle : 2-3 "sliders" (potentiomètres virtuels) avec étiquettes "Hauteur", "Réverbération", "Filtre".
+        4.  Utilisez un style "technique" ou sombre.
+        5.  Exportez en `vocodeur_ui_control.png` dans `images/projects/`.
+
+3.  **Illustration 3: Algorithmique complexe (diagramme de flux)**
+    *   Objectif : Mettre en avant votre capacité à concevoir des algorithmes complexes.
+    *   Outil recommandé : Python avec Matplotlib.
+    *   Quoi faire (Python - script à créer : `generer_algo_flow_vocodeur.py`) :
+        *   Dessinera un diagramme de flux simple.
+        *   Boîtes : "Signal Entrant" -> "Analyse Spectrale" -> "Extraction Caractéristiques" -> "Synthèse Modulée" -> "Signal Sortant".
+        *   Titre : "Flux Algorithmique Principal - Vocodeur".
+        *   Image de sortie : `vocodeur_algo_flow.png` dans `images/projects/generated/`.
+
+---
+
+**Projet 3: Site E-Commerce (Plateforme complète)**
+
+1.  **Illustration 1: Catalogue Produits Dynamique & Stack Technique**
+    *   Objectif : Montrer votre maîtrise du full-stack et de la gestion de données.
+    *   Outil recommandé : Figma (pour une composition).
+    *   Quoi faire (dans Figma) :
+        1.  Créez un cadre (ex: 900x500px). Titre : "E-Commerce : Catalogue & Stack".
+        2.  Partie gauche (2/3) : Maquette d'une page de liste de produits (grille 2x2 fiches produits, barre latérale "Filtres").
+        3.  Partie droite (1/3) : Icônes/labels pour "Python", "Flask", "SQL", "HTML", "CSS", "JS".
+        4.  Exportez en `ecommerce_catalog_stack.png` dans `images/projects/`.
+
+2.  **Illustration 2: Processus de commande sécurisé (storyboard)**
+    *   Objectif : Illustrer la conception de workflows utilisateur critiques.
+    *   Outil recommandé : Figma ou PowerPoint/Google Slides.
+    *   Quoi faire (dans Figma/Slides) :
+        1.  Créez une bande horizontale avec 3-4 mini-cadres séquentiels. Titre : "Tunnel d'Achat Sécurisé".
+        2.  Mini-cadre 1 ("Panier") : Icône panier, texte "X articles".
+        3.  Mini-cadre 2 ("Livraison & Paiement") : Champs de formulaire simplifiés.
+        4.  Mini-cadre 3 ("Confirmation") : Icône de coche, texte "Commande Validée !".
+        5.  Exportez en `ecommerce_checkout_flow.png` dans `images/projects/`.
+
+3.  **Illustration 3: Interface d'administration (Back-Office)**
+    *   Objectif : Démontrer votre capacité à développer des outils de gestion complets.
+    *   Outil recommandé : Figma.
+    *   Quoi faire (dans Figma) :
+        1.  Créez un cadre (ex: 800x600px). Titre : "Back-Office E-Commerce".
+        2.  Structure : menu latéral, zone de contenu principal.
+        3.  Menu latéral : Liens "Tableau de bord", "Commandes", "Produits", "Clients".
+        4.  Zone principale : Maquette d'un tableau "Dernières Commandes".
+        5.  Exportez en `ecommerce_admin_panel.png` dans `images/projects/`.
+
+---
+
+**Projet 4: Puissance X (Jeu de stratégie)**
+
+1.  **Illustration 1: Intelligence Artificielle (IA) avancée (arbre de décision)**
+    *   Objectif : Mettre en évidence vos compétences en IA.
+    *   Outil recommandé : Python avec Matplotlib.
+    *   Quoi faire (Python - script à créer : `generer_ia_tree_puissancex.py`) :
+        *   Dessinera un arbre de décision simple (nœud racine, enfants, petits-enfants).
+        *   Titre : "Arbre de Décision IA (Simplifié) - Puissance X".
+        *   Image de sortie : `puissancex_ia_tree.png` dans `images/projects/generated/`.
+
+2.  **Illustration 2: Interface graphique de jeu interactive (JavaFX)**
+    *   Objectif : Montrer vos compétences en développement d'interfaces graphiques de jeux.
+    *   Outil recommandé : Figma.
+    *   Quoi faire (dans Figma) :
+        1.  Créez un cadre (ex: 600x700px). Titre : "Interface de Jeu - Puissance X".
+        2.  Dessinez la grille du Puissance X (ex: 7x6).
+        3.  Placez quelques pions de deux couleurs.
+        4.  Ajoutez des éléments d'UI simples : "Tour de : Joueur X", "Score : ...".
+        5.  Exportez en `puissancex_game_ui.png` dans `images/projects/`.
+
+3.  **Illustration 3: Logique de jeu complexe et architecture (MVC pour jeu)**
+    *   Objectif : Illustrer la conception de la logique et de l'architecture d'un jeu.
+    *   Outil recommandé : Python avec Matplotlib.
+    *   Quoi faire (Python - script à créer : `generer_mvc_puissancex.py`) :
+        *   Dessinera un diagramme MVC adapté au jeu (Vue, Contrôleur, Modèle).
+        *   Flèches pour montrer les interactions.
+        *   Titre : "Architecture MVC du Jeu - Puissance X".
+        *   Image de sortie : `puissancex_mvc_diagram.png` dans `images/projects/generated/`.
+
+---

@@ -1,0 +1,445 @@
+/* Styles spécifiques pour les tablettes et mobiles */
+
+@media (max-width: 768px) {
+    html {
+        font-size: 56%;
+    }
+    
+    /* Masquer le terminal sur tablette */
+    .terminal-container {
+        display: none;
+    }
+    
+    /* Ajuster la mise en page du hero sans terminal */
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-buttons, .social-icons {
+        justify-content: center;
+    }
+    
+    /* Style du hamburger en orange */
+    .hamburger {
+        display: flex;
+        background-color: var(--accent-color);
+        border-radius: 4px;
+        padding: 0.8rem;
+        transition: all 0.3s ease;
+        margin-right: 0.5rem;
+    }
+    
+    .hamburger:hover {
+        transform: scale(1.05);
+        box-shadow: 0 2px 8px rgba(239, 131, 84, 0.4);
+    }
+    
+    .hamburger span {
+        background-color: white !important;
+    }
+    
+    .navbar.scrolled .hamburger span {
+        background-color: white !important;
+    }
+}
+
+/* Styles spécifiques pour les écrans très étroits (Samsung S21, etc.) */
+
+@media (max-width: 380px) {
+    /* Masquer les éléments non essentiels */
+    .cursor-follower {
+        display: none;
+    }
+    /* Réduction de la taille de base des polices */
+    html {
+        font-size: 52%;
+    }
+    
+    /* Réduction du padding des conteneurs */
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    /* Ajustement des sections */
+    section {
+        padding: 8rem 0;
+    }
+    
+    /* Masquer le terminal dans la section hero pour économiser de l'espace */
+    .terminal-container {
+        display: none;
+    }
+    
+    /* Ajuster la grille du hero pour utiliser toute la largeur */
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    /* Centrer les éléments sociaux */
+    .social-icons {
+        justify-content: center;
+    }
+    
+    /* Améliorer la visibilité des boutons */
+    .btn {
+        padding: 1.6rem 2.5rem;
+        font-weight: 600;
+        width: 100%;
+        max-width: 280px;
+        margin: 0.8rem auto;
+        font-size: 1.6rem;
+        border-radius: 6px; /* Augmenter le border-radius pour un look plus moderne */
+    }
+    
+    .primary-btn {
+        box-shadow: 0 4px 8px rgba(239, 131, 84, 0.3);
+        background-color: var(--accent-color);
+        color: white;
+    }
+    
+    .secondary-btn {
+        border-width: 2px;
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+    }
+    
+    /* Ajuster la navbar */
+    .navbar {
+        padding: 1.2rem 0;
+    }
+    
+    .navbar.scrolled {
+        padding: 1rem 0;
+    }
+    
+    .navbar .container {
+        padding: 0 1rem;
+    }
+    
+    .logo a {
+        font-size: 2rem;
+    }
+    
+    /* Ces styles sont déjà définis dans la media query 768px */
+    
+    .hamburger span {
+        width: 25px;
+        height: 2px;
+        margin: 4px 0;
+        background-color: white !important;
+    }
+    
+    .nav-links {
+        width: 85%;
+        padding: 2rem;
+    }
+    
+    .nav-links ul {
+        gap: 2.5rem;
+    }
+    
+    .nav-links a {
+        font-size: 1.8rem;
+        font-weight: 500;
+        padding: 0.8rem 0;
+        display: block;
+    }
+    
+    /* Optimiser le sélecteur de langue */
+    .language-selector {
+        top: 1.2rem;
+        right: 5.5rem;
+    }
+    
+    .language-toggle {
+        width: 32px;
+        height: 18px;
+    }
+    
+    .language-toggle::before {
+        width: 14px;
+        height: 14px;
+        top: 2px;
+    }
+    
+    .language-toggle.en::before {
+        left: calc(100% - 16px);
+    }
+    
+    .language-label {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    /* Améliorer la grille des projets */
+    .project-item {
+        margin-bottom: 3rem;
+    }
+    
+    .project-illustration {
+        height: 180px;
+    }
+    
+    /* Optimiser l'affichage des compétences */
+    .skill-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .skill-item h5 {
+        font-size: 1.4rem;
+    }
+    
+    .project-info {
+        padding: 1.5rem;
+    }
+    
+    .project-title {
+        font-size: 1.8rem;
+    }
+    
+    .project-description {
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .project-tech span {
+        font-size: 1.1rem;
+        padding: 0.3rem 0.8rem;
+        margin: 0.2rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .project-links .btn {
+        margin-bottom: 1rem;
+        font-weight: 600;
+        padding: 1.2rem 2rem;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .project-links .project-link {
+        margin-left: 0;
+        margin-top: 0.8rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--bg-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        color: var(--accent-color);
+    }
+    
+    /* Optimiser les filtres de projets */
+    .projects-filter {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .filter-btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 1.3rem;
+        min-width: auto;
+        border-radius: 20px; /* Boutons arrondis pour meilleure visibilité */
+        border: 1px solid var(--border-color);
+        background-color: var(--bg-light);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        font-weight: 500;
+    }
+    
+    .filter-btn.active {
+        background-color: var(--accent-color);
+        color: white;
+        border-color: var(--accent-color);
+        box-shadow: 0 2px 6px rgba(239, 131, 84, 0.3);
+    }
+    
+    /* Optimiser la timeline */
+    .timeline-item {
+        padding-left: 50px;
+    }
+    
+    .timeline-dot {
+        left: 50px;
+    }
+    
+    .timeline-icon {
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+    }
+    
+    .timeline-date {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--accent-color);
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .timeline-content h4 {
+        font-size: 1.5rem;
+    }
+    
+    /* Optimiser le formulaire de contact */
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+        padding: 2rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+    
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 1.4rem;
+        border-radius: 6px;
+        border: 1px solid var(--border-color);
+        background-color: var(--bg-light);
+        font-size: 1.5rem;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 2px rgba(239, 131, 84, 0.2);
+    }
+    
+    .contact-form .btn {
+        margin-top: 1rem;
+    }
+    
+    /* Ajuster le footer */
+    .footer {
+        padding: 3rem 0 5rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    /* Améliorer la visibilité des boutons flottants */
+    .back-to-top,
+    .dark-mode-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+        bottom: 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+    }
+    
+    .back-to-top {
+        right: 2rem;
+    }
+    
+    .dark-mode-toggle {
+        left: 2rem;
+    }
+    
+    /* Optimiser les modales de projet */
+    .project-modal .modal-container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    .modal-header h2 {
+        font-size: 2rem;
+    }
+    
+    .carousel-caption {
+        padding: 0.8rem;
+        font-size: 1.3rem;
+    }
+    
+    .carousel-control {
+        width: 35px;
+        height: 35px;
+        font-size: 1.4rem;
+    }
+}
+
+/* Styles spécifiques pour les écrans extrêmement étroits */
+
+@media (max-width: 320px) {
+    html {
+        font-size: 50%;
+    }
+    
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .btn {
+        padding: 1.4rem 2rem;
+        font-size: 1.5rem;
+    }
+    
+    .projects-filter {
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        padding: 0.7rem 1rem;
+        font-size: 1.2rem;
+    }
+    
+    /* Réduire encore la taille des boutons flottants */
+    .back-to-top,
+    .dark-mode-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1.6rem;
+    }
+}

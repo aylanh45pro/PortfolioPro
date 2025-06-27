@@ -1,0 +1,139 @@
+{% extends 'admin/layout_admin.html' %}
+
+{% block title %}
+    Visualisation de données sur les stocks pour l’administrateur
+{% endblock %}
+
+{% block body %}
+    <h1 class="my-4">Visualisation de données sur les stocks pour l’administrateur</h1>
+
+    <!-- Tableau récapitulatif des types de câbles -->
+    <h2 class="my-4">Résumé des types de câbles</h2>
+    <div class="table-responsive mb-4">
+        <table class="table table-striped table-bordered text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Type d'article</th>
+                    <th>ID</th>
+                    <th>Nombre de déclinaisons</th>
+                    <th>Nombre de notes</th>
+                    <th>Note moyenne</th>
+                    <th>Nombre de commentaires</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in datas_show_type_article %}
+                    <tr>
+                        <td>{{ row.libelle }}</td>
+                        <td>{{ row.id_type_article }}</td>
+                        <td style="color: red;">{{ row.nbr_declinaisons }}</td>
+
+                        <td>{{ row.nbr_notes }}</td>
+                        <td>
+                            {% if row.note_moyenne %}
+                                {{ row.note_moyenne|round(2) }}
+                            {% else %}
+                                -
+                            {% endif %}
+                        </td>
+                        <td>{{ row.nbr_commentaires }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Visualisation Coût du stock par déclinaison -->
+    <div class="row mb-4">
+        <div class="col-md-6 mb-4">
+            <h5 class="text-center">Coût du stock par déclinaison (taille, couleur)</h5>
+            <canvas id="chartCoûtStockDeclinaison"></canvas>
+        </div>
+    </div>
+
+    <!-- Visualisation Nombre d'articles en stock par déclinaison -->
+    <div class="row mb-4">
+        <div class="col-md-6 mb-4">
+            <h5 class="text-center">Nombre d'articles en stock par déclinaison (taille, couleur)</h5>
+            <canvas id="chartStockArticlesDeclinaison"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const labelsDeclinaison = {{ labels_declinaison_cable|tojson }};
+        const coutStockDeclinaison = {{ cout_stock_declinaison|tojson }};
+        const nbArticlesStockDeclinaison = {{ nb_articles_stock_declinaison|tojson }};
+
+        new Chart(document.getElementById('chartCoûtStockDeclinaison'), {
+            type: 'bar',
+            data: {
+                labels: labelsDeclinaison,
+                datasets: [{
+                    label: 'Coût du stock par déclinaison',
+                    data: coutStockDeclinaison,
+                    backgroundColor: '#007bff'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true, position: 'top' },
+                    tooltip: {
+                        callbacks: {
+                            label: (context) => '€ ' + context.raw.toFixed(2)
+                        }
+                    }
+                },
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Coût (€)'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Déclinaisons (Taille, Couleur)'
+                        }
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('chartStockArticlesDeclinaison'), {
+            type: 'bar',
+            data: {
+                labels: labelsDeclinaison,
+                datasets: [{
+                    label: 'Nombre d\'articles en stock par déclinaison',
+                    data: nbArticlesStockDeclinaison,
+                    backgroundColor: '#28a745'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true, position: 'top' }
+                },
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Nombre d\'articles'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Déclinaisons (Taille, Couleur)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+{% endblock %}
